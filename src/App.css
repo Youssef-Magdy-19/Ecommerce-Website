@@ -1,0 +1,337 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.continer{
+  width: 86% !important;
+  margin: auto;
+}
+body{
+  transition: .5s;
+}
+.dark{
+  background-color: black !important;
+  color: #fff !important;
+}
+
+/* navbar */
+.header{
+  width: 90%;
+  margin: auto;
+  display: flex ;
+  flex-direction: row ;
+  justify-content: space-between !important;
+  padding-top: 5px;
+  padding-bottom: 4px;
+}
+.navbar{
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  background-color: #ddd;
+}
+.nav a:hover{
+  color: rgba(0, 0, 0, .75) !important;
+}
+.title a{
+  text-decoration: none;
+}
+.dark .title a{
+  color: #fff !important;
+}
+.nav a{
+  margin-bottom: 5px;
+}
+.header a.active{
+  color: black !important;
+}
+.header .active-btn{
+  color: #fff;
+  background-color: black;
+}
+.header .dark-light{
+  border: 1px solid rgba(255, 255, 255, .75);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px ;
+  margin-top: 7.5px;
+  margin-left: 22px;
+}
+.dark-light:active{
+  scale: .8;
+  transition: .7s;
+}
+.dark-light{
+  transition: .5s;
+  box-shadow: 0 1px 5px 0 rgb(236, 190, 104);
+}
+.header .dark-light i{
+  font-size: 22px;
+}
+.menu-icon{
+  color: #fff !important;
+  border: 1px solid #fff !important;
+  margin-left: auto;
+}
+.header-elements{ 
+  display: flex; 
+  flex-direction: row !important;
+  justify-content: space-between !important;
+}
+/* home section */
+#home{
+  padding: 1px 15px;
+}
+.background{
+  margin-top: 100px;
+  background-image: url(../public/assets/main.png.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  border-radius: 10px;
+  position: relative;
+}
+.background div{
+  position: absolute;
+  transform: translate(5% , -50%);
+  top: 50%;
+  color: #fff;
+}
+.background-info{
+  width: 90%;
+}
+.background-info h5{
+  font-size: 40px;
+  font-weight: 400;
+}
+
+/* products section */
+#products,#about,#PageNotFound,#cart,#product{
+  padding-top: 80px;
+}
+.line,.login-line,.register-line,.contact-line,.about-line,.cart-line,.check-line{
+  height: 1px;
+  width: 17%;
+  border-radius: 10px;
+  transition: .3s ease-in-out;
+}
+.login-line,.register-line,.contact-line{
+  width: 80%;
+}
+.products-title:hover .line , .login-title:hover .login-line , .register-title:hover
+ .register-line,.contact-title:hover .contact-line,.about-title:hover .about-line,
+ .cart-title:hover .cart-line,.check-title:hover .check-line{
+  transform: scale(1.4 ,1.5);
+}
+.product-description{
+  height: 80px;
+}
+
+/* footer */
+#footer{
+  background-color: #ddd;
+}
+#footer a{
+  font-size: 20px;
+}
+#footer a i{
+  font-size: 30px;
+  margin-top: 10px;
+}
+/* login & register & contact*/
+.login,#PageNotFound{
+  height: 76.25vh;
+}
+.login,.register,.contact{
+  padding-top: 105px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.register,.contact,#check{
+  padding-top: 92.5px;
+}
+/* about section */
+.types-products img{
+  border-radius: 5px 5px 0px 0px;
+}
+/* page not found */
+.page{
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* cart */
+.cart-title{
+  padding-top: 90px;
+}
+.price-total p,.price-qty{
+  font-weight: bold;
+}
+.minus, .plus{
+  border: 1px solid #333333;
+  padding: 0px 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.minus:active , .plus:active ,.active-btn:active{
+  scale: .8;
+  transition: .7s;
+}
+.pro-qty{
+  font-size: 18px;
+}
+.empty{
+  height: 65vh !important;
+  padding: 0;
+}
+/* product */
+#product{
+  margin-bottom: 60px;
+  /* padding-top: 150px; */
+}
+.product-title , .product-price{
+  font-size: 38px;
+  font-weight: 300;
+}
+.product-rating {
+  font-size: 25px;
+}
+.product-info .product-category{
+  text-transform: uppercase;
+}
+.product-descr{
+  font-size: 18px;
+}
+/* dark mode */
+.dark .navbar , .dark #footer{
+  background-color: #333333;
+  color: #fff !important;
+}
+.dark .title{
+  color: #fff;
+}
+.dark .buttons a ,.dark .buttons-category button {
+  color: #fff ;
+  border: 1px solid white ;
+}
+.dark .buttons a:hover ,.dark .buttons-category button:hover{
+  color: black ;
+  background-color: #fff ;
+  border: 1px solid black ;
+}
+.dark .links , .dark .dark-light {
+  color: rgba(255, 255, 255, .75) !important;
+}
+
+.dark .links:hover , .dark a.active , .dark .dark-light:hover{
+  color: #fff !important;
+}
+.sun{
+  color: rgba(255, 165, 0, 0.7);
+}
+.dark-light:hover .sun{
+  color: orange;
+}
+.dark-light:hover{
+  border: 1px solid goldenrod;
+}
+.dark a.active-btn ,.dark .line ,.dark .btn-link , .dark .btn-send{
+  color: black !important;
+  background-color: #fff !important;
+}
+.dark .dark-light{
+  background-color: #4d4c4c;
+}
+.dark .card{
+  background-color: black;
+  border: 1px solid #fff;
+  color: #fff
+}
+.dark .card button , .dark .card a{
+  color: black !important;
+  background-color: #fff !important;
+}
+.dark .card button:hover , .dark .card a:hover {
+  background-color: rgba(255, 255, 255, .75) !important;
+}
+.dark .product-image{
+  border-radius: 13px 13px 0 0 !important;
+}
+.card a:active , .card button:active{
+  scale: .8;
+  transition: .7s;
+}
+.dark #footer a{
+  color: #fff !important;
+}
+.dark input ,.dark textarea , .dark input:focus , .dark textarea:focus , .dark select{
+  background-color: black;
+  border: 1px #4d4c4c solid  !important;
+  outline: none !important;
+  color: #fff !important;
+}
+.dark input::placeholder , .dark textarea::placeholder{
+  color: #fff !important;
+}
+.btn-link {
+  text-decoration: none;
+  background-color: #333333 !important;
+  color: #fff !important;
+}
+.btn-link:hover{
+  background-color: #4d4c4c !important;
+}
+.dark .btn-link:hover , .dark .product-buttons button:hover{
+  background-color: rgba(255, 255, 255, .75) !important;
+}
+.btn-link:active , .dark .product-buttons button:active{
+  scale: .8;
+  transition: .5s;
+}
+.dark .card-header{
+  border-bottom: 1px solid #fff !important;
+}
+.dark #PageNotFound , .dark #PageNotFound a{
+  color: #fff;
+}
+.dark #PageNotFound a {
+  border: 1px solid #fff;
+}
+.dark #PageNotFound a:hover{
+  background-color: #fff;
+  color: black;
+}
+.dark .plus , .dark .minus{
+  border: 1px #fff solid;
+}
+.dark .product-buttons button{
+  background-color: #fff;
+  color: #333333;
+  cursor: pointer;
+}
+@media(max-width:767px){
+  .header{
+    flex-direction: column !important;
+  }
+  .nav{
+    margin: 10px 0px !important;
+  }
+  .product-description{
+    height: 85px;
+  }
+  .login,.register,.contact{
+    height: 80vh;
+  }
+}
+@media(max-width:567px){
+  .checkout{
+    margin: auto;
+    margin-top: 20px;
+    
+  }
+}
