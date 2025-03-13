@@ -77,7 +77,7 @@ const Products =()=>{
                                     <p className="products-price text-center">price : {pro.price} $</p>
                                     <hr />
                                     <div className="buttons-buy text-center pb-3">
-                                        <Link to={"/Ecommerce-Website/products/"+ pro.id} className="btn btn-dark me-3" >Buy Now</Link>
+                                        <Link to={"/products/"+ pro.id} className="btn btn-dark me-3" >Buy Now</Link>
                                         <button className="product-btn btn btn-dark m-1"id={pro.id}onClick={() => {
                                         toast.success("Added to cart");addProduct(pro )}} 
                                         >Add to Cart</button>

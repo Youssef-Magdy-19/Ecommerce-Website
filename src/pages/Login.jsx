@@ -14,7 +14,7 @@ const Login =()=>{
             if(user.email && user.password != ""){
                 if(userInfo.email == user.email && userInfo.password == user.password){
                     toast.success("signed in")
-                    setTimeout(()=>window.location="/Ecommerce-Website/",2000)
+                    setTimeout(()=>window.location="/",2000)
                 }else{
                     toast.error("The Email or Password Is false")
                 }
@@ -41,7 +41,7 @@ const Login =()=>{
                 <div class="mb-3 form-check col-md-5 col-sm-7 col-10">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
                     <label class="form-check-label" for="exampleCheck1">New Here? </label>
-                    <Link to="/Ecommerce-Website/register"> Register</Link>
+                    <Link to="/register"> Register</Link>
                 </div>
                 <div className="btn-login text-center mt-3">
                     <a  type="submit" class="btn-link btn btn-dark" onClick={()=>{check();localStorage.setItem("currentUser" , currentUserInfo === false ? true : false)}}>Login</a>

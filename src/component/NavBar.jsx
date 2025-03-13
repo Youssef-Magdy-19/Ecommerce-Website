@@ -56,19 +56,19 @@ function NavBar() {
             <div className="header-elements col-md-9 col-12 m-auto">
               <Navbar.Collapse id="basic-navbar-nav" >
                 <Nav className="nav m-auto text-center">
-                    <Link className={active === "home" ? "active links text-decoration-none ms-3 link-secondary" : "text-decoration-none ms-3 link-secondary links"}  onClick={()=>setactive("home")} to="/Ecommerce-Website/">Home</Link>
-                    <Link className={active === "products" ? "active links text-decoration-none ms-3 link-secondary" : "text-decoration-none ms-3 link-secondary links"} onClick={()=>setactive("products")} to="/Ecommerce-Website/products" >Products</Link>
-                    <Link className={active === "about" ? "active links text-decoration-none ms-3 link-secondary" : "text-decoration-none ms-3 link-secondary links"} onClick={()=>setactive("about")} to="/Ecommerce-Website/about" >About</Link>
-                    <Link className={active === "contact" ? "active links text-decoration-none ms-3 link-secondary" : "text-decoration-none ms-3 link-secondary links"} onClick={()=>setactive("contact")} to="/Ecommerce-Website/contact">Contact</Link>
+                    <Link className={active === "home" ? "active links text-decoration-none ms-3 link-secondary" : "text-decoration-none ms-3 link-secondary links"}  onClick={()=>setactive("home")} to="/">Home</Link>
+                    <Link className={active === "products" ? "active links text-decoration-none ms-3 link-secondary" : "text-decoration-none ms-3 link-secondary links"} onClick={()=>setactive("products")} to="/products" >Products</Link>
+                    <Link className={active === "about" ? "active links text-decoration-none ms-3 link-secondary" : "text-decoration-none ms-3 link-secondary links"} onClick={()=>setactive("about")} to="/about" >About</Link>
+                    <Link className={active === "contact" ? "active links text-decoration-none ms-3 link-secondary" : "text-decoration-none ms-3 link-secondary links"} onClick={()=>setactive("contact")} to="/contact">Contact</Link>
                 </Nav>
                 <div className="buttons d-flex justify-content-center">
-                  {currentUserInfo ? <Link to="/Ecommerce-Website/login" id="logout" className={active === "login" ? "active-btn  btn btn-outline-dark ms-2" : "btn btn-outline-dark ms-2"} onClick={()=>{ updateNavBar();
+                  {currentUserInfo ? <Link to="/login" id="logout" className={active === "login" ? "active-btn  btn btn-outline-dark ms-2" : "btn btn-outline-dark ms-2"} onClick={()=>{ updateNavBar();
                   setCurrentUserInfo(localStorage.setItem("currentUser",false));
                   setactive("logout")}}><FontAwesomeIcon icon={ARightFrom}/> Logout</Link> :
-                  <><Link to="/Ecommerce-Website/login" id="login"  className={active === "login" ? "active-btn  btn btn-outline-dark ms-2" : "btn btn-outline-dark ms-2"} onClick={()=>{setactive("login");}} ><FontAwesomeIcon icon={ARight} /> Login</Link>
-                    <Link to="/Ecommerce-Website/register" id="register" className={active === "register" ? "active-btn  btn btn-outline-dark ms-2" : "btn btn-outline-dark ms-2"} onClick={()=>setactive("register")}><i className="fa fa-user-plus mr-1"></i> Register</Link></>
+                  <><Link to="/login" id="login"  className={active === "login" ? "active-btn  btn btn-outline-dark ms-2" : "btn btn-outline-dark ms-2"} onClick={()=>{setactive("login");}} ><FontAwesomeIcon icon={ARight} /> Login</Link>
+                    <Link to="/register" id="register" className={active === "register" ? "active-btn  btn btn-outline-dark ms-2" : "btn btn-outline-dark ms-2"} onClick={()=>setactive("register")}><i className="fa fa-user-plus mr-1"></i> Register</Link></>
                   }
-                    <Link to="/Ecommerce-Website/cart" className={active === "cart" ? "active-btn  btn btn-outline-dark ms-2" : "btn btn-outline-dark ms-2"} onClick={()=>setactive("cart")}><FontAwesomeIcon icon={Cart} /> Cart ({state.length})</Link>
+                    <Link to="/cart" className={active === "cart" ? "active-btn  btn btn-outline-dark ms-2" : "btn btn-outline-dark ms-2"} onClick={()=>setactive("cart")}><FontAwesomeIcon icon={Cart} /> Cart ({state.length})</Link>
                 </div> 
               </Navbar.Collapse>
             </div>
