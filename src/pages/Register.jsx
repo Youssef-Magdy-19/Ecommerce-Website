@@ -14,7 +14,7 @@ const Register =()=>{
                 toast.success("signed up")
                 const userInfo = localStorage.setItem("userInfo", JSON.stringify(user))
                 const Name = localStorage.setItem("name" , JSON.stringify(user.name))
-                setTimeout(()=>window.location="/login",2000)
+                setTimeout(()=>window.location="/Ecommerce-Website/login",2000)
             }else{
                 toast.error("Enter full Data");
             }
@@ -41,7 +41,7 @@ const Register =()=>{
             <div class="mb-3 form-check col-md-5 col-sm-7 col-10">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
                 <label class="form-check-label" for="exampleCheck1">Already has an account? </label>
-                <Link to="/login"> Login</Link>
+                <Link to="/Ecommerce-Website/login"> Login</Link>
             </div>
             <div className="btn-login text-center mt-3">
                 <Link  type="submit" class="btn-link btn btn-dark" onClick={()=>check()}>Register</Link>

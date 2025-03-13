@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import NavBar from "../component/NavBar";
-import Footer from "../component/Footer";
 import toast from "react-hot-toast";
-import { NavLink } from "react-router-dom";
+
 
 const Contact =()=>{
     const [user,setuser] = useState({

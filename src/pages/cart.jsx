@@ -87,7 +87,7 @@ const Cart =()=>{
                                     <p>Total : </p>
                                     <p>{Math.floor(totalPrice) + 30}$</p>
                                 </div>
-                                <Link to="/checkout" className="btn btn-dark w-100">Go To Checkout</Link> 
+                                <Link to="/Ecommerce-Website/checkout" className="btn btn-dark w-100">Go To Checkout</Link> 
                             </div>
                         </div>
                     </div>

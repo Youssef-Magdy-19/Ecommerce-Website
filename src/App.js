@@ -24,15 +24,15 @@ function App() {
 
     <NavBar/>
     <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/products" element={<Products/>}/>
-      <Route path="/about" element={<About/>}/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/register" element={<Register/>}/>
-      <Route path="/contact" element={<Contact/>}/>
-      <Route path="/cart" element={<Cart/>}/>
-      <Route path="/checkout" element={<Check/>}/>
-      <Route path="/products/:id" element={<ProductBuy/>}/>
+      <Route path="/Ecommerce-Website/" element={<Home/>}/>
+      <Route path="/Ecommerce-Website/products" element={<Products/>}/>
+      <Route path="/Ecommerce-Website/about" element={<About/>}/>
+      <Route path="/Ecommerce-Website/login" element={<Login/>}/>
+      <Route path="/Ecommerce-Website/register" element={<Register/>}/>
+      <Route path="/Ecommerce-Website/contact" element={<Contact/>}/>
+      <Route path="/Ecommerce-Website/cart" element={<Cart/>}/>
+      <Route path="/Ecommerce-Website/checkout" element={<Check/>}/>
+      <Route path="/Ecommerce-Website/products/:id" element={<ProductBuy/>}/>
       <Route path="*" element={<PageNotFound/>}/>
     </Routes>
     <Footer/>
