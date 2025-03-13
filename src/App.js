@@ -31,7 +31,7 @@ function App() {
       <Route path="/contact" element={<Contact/>}/>
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/checkout" element={<Check/>}/>
-      <Route path="/Ecommerce-Website/products/:id" element={<ProductBuy/>}/>
+      <Route path="/products/:id" element={<ProductBuy/>}/>
       <Route path="*" element={<PageNotFound/>}/>
     </Routes>
     <Footer/>
