@@ -14,7 +14,7 @@ const Login =()=>{
             if(user.email && user.password != ""){
                 if(userInfo.email == user.email && userInfo.password == user.password){
                     toast.success("signed in")
-                    setTimeout(()=>window.location="/",2000)
+                    setTimeout(()=><Link to="/"/>,2000)
                 }else{
                     toast.error("The Email or Password Is false")
                 }

@@ -14,7 +14,7 @@ const Register =()=>{
                 toast.success("signed up")
                 const userInfo = localStorage.setItem("userInfo", JSON.stringify(user))
                 const Name = localStorage.setItem("name" , JSON.stringify(user.name))
-                setTimeout(()=>window.location="/login",2000)
+                setTimeout(()=><Link to="/login"/>,2000)
             }else{
                 toast.error("Enter full Data");
             }
