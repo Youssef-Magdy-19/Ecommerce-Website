@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { addCart, deleteCart } from "../Redux/Action"
+import { WindowScrollToTop } from "../utils/WindowScrollToTop";
 
 const Cart =()=>{
     const state = useSelector((state) => state.Handle)
@@ -16,8 +17,7 @@ const Cart =()=>{
         dispatch(addCart(product))
     }
     
-    
-    
+    WindowScrollToTop()
     const EmptyCart=()=>{
         return(
             <section id="PageNotFound" className="empty">

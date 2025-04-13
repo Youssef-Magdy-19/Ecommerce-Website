@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
-
+import { WindowScrollToTop } from "../utils/WindowScrollToTop";
 
 const Contact =()=>{
     const [user,setuser] = useState({
@@ -25,6 +25,7 @@ const Contact =()=>{
             toast.error("Enter full Data");
         }
     }
+    WindowScrollToTop()
     return(
         <>
         <section id="contact">

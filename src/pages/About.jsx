@@ -1,6 +1,8 @@
 import React from "react";
+import { WindowScrollToTop } from "../utils/WindowScrollToTop";
 
 const About =()=>{
+    WindowScrollToTop()
     return(
         <>
         <section id="about" className="container">

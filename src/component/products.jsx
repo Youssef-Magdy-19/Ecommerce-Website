@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { addCart } from "../Redux/Action";
 
 const Products =()=>{
+    const [active , setActive] = useState("all")
     const [data,setData]=useState([])
     const [filter,setFilter] = useState(data)
     const [isClicked , setisClicked] = useState(()=>{
@@ -34,17 +35,6 @@ const Products =()=>{
         dispatch(addCart(product))
     }
     
-    // const updateBtn=(product)=>{
-    //     let productsBtns = [...document.querySelectorAll(".product-btn")] 
-    //     let prodcutBtn = productsBtns.find((btn)=> btn.getAttribute("id") == product.id)
-    //     return (
-    //         prodcutBtn.innerHTML = "Added in Cart",
-    //         prodcutBtn.className = "btn btn-white border border-dark",
-    //         prodcutBtn.style.transition = ".7s ease-in-out",
-    //         prodcutBtn.style.pointerEvents = "none"
-    //     )
-    // }
-    
     return(
         <>
         
@@ -54,11 +44,50 @@ const Products =()=>{
                 <div className="line m-auto mb-4 bg-dark"></div>
             </div>
             <div className="buttons-category text-center mb-4">
-                <button className="btn btn-outline-dark mb-2" onClick={()=> setFilter(data)}>All</button>
-                <button className="btn btn-outline-dark ms-2 mb-2" onClick={()=> updateFilter("men's clothing")}>Men's Clothing</button>
-                <button className="btn btn-outline-dark ms-2 mb-2" onClick={()=> updateFilter("women's clothing")}>Women's Clothing</button>
-                <button className="btn btn-outline-dark ms-2 mb-2" onClick={()=> updateFilter("jewelery")}>Jewelery</button>
-                <button className="btn btn-outline-dark ms-2 mb-2" onClick={()=> updateFilter("electronics")}>Electronics</button>
+                <button className={active === "all" ?
+                    "active-filter btn btn-outline-dark mb-2" : "btn btn-outline-dark mb-2"} 
+                    onClick={()=> {
+                        setFilter(data)
+                        setActive("all")
+                    }}
+                >
+                    All
+                </button>
+                <button className={active === "men's clothing" ?
+                    "active-filter btn btn-outline-dark mb-2 ms-2" : "btn btn-outline-dark mb-2 ms-2"} 
+                    onClick={()=> {
+                        updateFilter("men's clothing")
+                        setActive("men's clothing")
+                    }}
+                >
+                    Men's Clothing
+                </button>
+                <button className={active === "women's clothing" ? 
+                    "active-filter btn btn-outline-dark mb-2 ms-2" : "btn btn-outline-dark mb-2 ms-2"} 
+                    onClick={()=> {
+                        updateFilter("women's clothing")
+                        setActive("women's clothing")
+                    }}
+                >
+                    Women's Clothing
+                </button>
+                <button className={active === "jewelery" ? 
+                    "active-filter btn btn-outline-dark mb-2 ms-2" : "btn btn-outline-dark mb-2 ms-2"} 
+                    onClick={()=> {
+                        updateFilter("jewelery")
+                        setActive("jewelery")
+                    }}
+                >
+                    Jewelery
+                </button>
+                <button className={active === "electronics" ? 
+                    "active-filter btn btn-outline-dark mb-2 ms-2" : "btn btn-outline-dark mb-2 ms-2"} 
+                    onClick={()=> {
+                        updateFilter("electronics")
+                        }}
+                >
+                    Electronics
+                </button>
             </div>
             <div className="cards row justify-content-center">
                 {
@@ -78,7 +107,7 @@ const Products =()=>{
                                     <hr />
                                     <div className="buttons-buy text-center pb-3">
                                         <Link to={"/products/"+ pro.id} className="btn btn-dark me-3" >Buy Now</Link>
-                                        <button className="product-btn btn btn-dark m-1"id={pro.id}onClick={() => {
+                                        <button className="product-btn btn btn-dark m-1" id={pro.id} onClick={() => {
                                         toast.success("Added to cart");addProduct(pro )}} 
                                         >Add to Cart</button>
                                     </div>

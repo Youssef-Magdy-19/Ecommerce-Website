@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { addCart } from "../Redux/Action";
 import toast from "react-hot-toast";
-import Marquee from "react-fast-marquee";
+import Marquee from "react-fast-marquee";                       
 
 const ProductBuy =()=>{
     const id = useParams()
@@ -21,10 +21,12 @@ const ProductBuy =()=>{
             console.log(data.category)
             const response2 = await fetch(`https://fakestoreapi.com/products/category/${data.category}`)
             const smilarData = await response2.json()
-            console.log(smilarData)
-            setSmilarProducts(smilarData)
+            setSmilarProducts(smilarData.filter((pro)=>{return pro.id != data.id}))
         }
-        handleProduct() 
+        handleProduct()
+    },[id])
+    useEffect(()=>{
+        window.scrollTo(0,0)
     },[id])
     const ShowProduct =()=>{
         return(

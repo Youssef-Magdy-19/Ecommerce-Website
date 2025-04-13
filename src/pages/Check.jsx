@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
+import { WindowScrollToTop } from "../utils/WindowScrollToTop";
 
 const Check=()=>{
     const state = useSelector((state) => state.Handle)
@@ -13,6 +13,7 @@ const Check=()=>{
     state.map((pro)=>{
         qtyProducts += pro.qty
     })
+    WindowScrollToTop()
         return(
             <>
             <section id="check" className="continer m-auto">

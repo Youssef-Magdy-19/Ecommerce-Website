@@ -53,7 +53,7 @@ function NavBar() {
                 </div>
               <Navbar.Toggle aria-controls="basic-navbar-nav" className="menu-icon col-2"/>
             </div>
-            <div className="header-elements col-md-9 col-12 m-auto">
+            <div className="header-elements col-md-9 col-12">
               <Navbar.Collapse id="basic-navbar-nav" >
                 <Nav className="nav m-auto text-center">
                     <Link className={active === "home" ? "active links text-decoration-none ms-3 link-secondary" : "text-decoration-none ms-3 link-secondary links"}  onClick={()=>setactive("home")} to="/">Home</Link>
@@ -61,7 +61,7 @@ function NavBar() {
                     <Link className={active === "about" ? "active links text-decoration-none ms-3 link-secondary" : "text-decoration-none ms-3 link-secondary links"} onClick={()=>setactive("about")} to="/about" >About</Link>
                     <Link className={active === "contact" ? "active links text-decoration-none ms-3 link-secondary" : "text-decoration-none ms-3 link-secondary links"} onClick={()=>setactive("contact")} to="/contact">Contact</Link>
                 </Nav>
-                <div className="buttons d-flex justify-content-center">
+                <div className="buttons-header d-flex">
                   {currentUserInfo ? <Link to="/login" id="logout" className={active === "login" ? "active-btn  btn btn-outline-dark ms-2" : "btn btn-outline-dark ms-2"} onClick={()=>{ updateNavBar();
                   setCurrentUserInfo(localStorage.setItem("currentUser",false));
                   setactive("logout")}}><FontAwesomeIcon icon={ARightFrom}/> Logout</Link> :

@@ -127,7 +127,14 @@ body{
 .product-description{
   height: 80px;
 }
-
+.active-filter{
+  background-color: #fff !important;
+  color: black !important;
+}
+.light .active-filter{
+  background-color: black !important;
+  color: #fff !important;
+}
 /* footer */
 #footer{
   background-color: #ddd;
@@ -320,6 +327,9 @@ body{
   }
   .nav{
     margin: 10px 0px !important;
+  }
+  .buttons-header{
+    justify-content: center !important;
   }
   .product-description{
     height: 85px;
