@@ -79,6 +79,14 @@ body{
   flex-direction: row !important;
   justify-content: space-between !important;
 }
+.dark .buttons-header a{ 
+  color: #fff !important;
+  border: 1px solid #fff;
+}
+.dark .buttons-header a:hover{ 
+  color: black !important;
+  background-color: #fff;
+}
 /* home section */
 #home{
   padding: 1px 15px;
